@@ -9,6 +9,27 @@
 <meta name="description" content="{{ config('app.name') }} is a smart fuel monitoring solution designed to deliver real-time fuel quantity and quality analysis using intelligent sensor technology.">
 <title>@yield('title', config('app.name') . ' – Intelligent Fuel Monitoring & Analytics')</title>
 
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ config('app.url', 'https://yourdomain.com') }}">
+<meta property="og:title" content="@yield('title', config('app.name') . ' – Intelligent Fuel Monitoring & Analytics')">
+<meta property="og:description" content="{{ config('app.name') }} is a smart fuel monitoring solution designed to deliver real-time fuel quantity and quality analysis using intelligent sensor technology.">
+<meta property="og:image" content="{{ config('app.url', 'https://yourdomain.com') }}/images/logo.png">
+<meta property="og:image:width" content="155">
+<meta property="og:image:height" content="35">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ config('app.url', 'https://yourdomain.com') }}">
+<meta property="twitter:title" content="@yield('title', config('app.name') . ' – Intelligent Fuel Monitoring & Analytics')">
+<meta property="twitter:description" content="{{ config('app.name') }} is a smart fuel monitoring solution designed to deliver real-time fuel quantity and quality analysis using intelligent sensor technology.">
+<meta property="twitter:image" content="{{ config('app.url', 'https://yourdomain.com') }}/images/logo.png">
+
+<!-- WhatsApp specific -->
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="{{ config('app.name') }} Logo">
+
 <link rel="shortcut icon" href="/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/animate.css">
@@ -83,7 +104,7 @@
                                     <!-- site-branding -->
                                     <div class="site-branding ">
                                         <h1>
-                                        <a class="home-link" href="{{ route('home') }}" title="Elexio" rel="home">
+                                        <a class="home-link" href="{{ route('home') }}" title="{{ config('app.name') }}" rel="home">
                                             <img id="logo-img" height="35" width="155" class="img-fluid auto_size" src="/images/logo.png" alt="logo-img">
                                         </a>
                                         </h1>
@@ -165,7 +186,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="justify-content-between">
-                                    <span class="cpy-text text-center">Copyright © 2022 <a href="{{ route('home') }}"> Elexio </a>. All Rights Reserved.</span>
+                                    <span class="cpy-text text-center">Copyright © {{ date('Y') }} <a href="{{ route('home') }}"> {{ config('app.name') }} </a>. All Rights Reserved.</span>
                                 </div>
                             </div>
                         </div>
